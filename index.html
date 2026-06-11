@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohit Sharma - Flutter & Mobile App Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Sohit Sharma</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-sphere"></div>
+            <div class="gradient-sphere"></div>
+            <div class="gradient-sphere"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">
+                Hi, I'm <span class="highlight">Sohit Sharma</span>
+            </h1>
+            <h2 class="hero-subtitle animate-fade-in animate-delay-1">
+                Flutter & Mobile App Developer
+            </h2>
+            <p class="hero-description animate-fade-in animate-delay-2">
+                Creating Scalable, High-Performance Flutter, iOS & Android Applications with AI-Driven Features
+            </p>
+            <div class="hero-buttons animate-fade-in animate-delay-3">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+            </div>
+            <div class="hero-social animate-fade-in animate-delay-4">
+                <a href="https://github.com/Sohit-Sharma" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sohit-sharma-940084172/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:sohitsharma922@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <p>
+                        I'm a passionate Flutter & Mobile App Developer with <strong>5+ years of experience</strong> in building 
+                        intelligent, scalable, and user-centric mobile applications. My expertise spans across cross-platform development 
+                        with Flutter, native Android development with Kotlin, and AI-powered app features.
+                    </p>
+                    <p>
+                        I specialize in creating high-performance mobile solutions with robust backends, real-time features, 
+                        and AI-driven capabilities. My approach combines technical excellence with innovative problem-solving, 
+                        ensuring that every app I build is both functional and delightful to use.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Mobile Apps</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1500+</span>
+                            <span class="stat-label">LinkedIn Connections</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <div class="image-container">
+                        <img src="assets/images/hero.jpeg" alt="Sohit Sharma - Flutter Developer" class="about-profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i> Languages
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Dart</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kotlin</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JAVA</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3 class="category-title">
+                        <i class="fas fa-layer-group"></i> Frameworks
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Flutter</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Android SDK</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">GETX</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i> Databases
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">SQLite</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Hive</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SharedPreferences</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Firestore</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i> Tools
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Android Studio</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Xcode</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Postman</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+<i class="fas fa-envelope-open-text"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Invitation Maker App</h3>
+                        <p class="project-description">
+                            Invitation Maker Card Design gives you Free Professional invitation card templates which you can use for your event, parties or any occasion. It is easier to make any card.
+With Invitation Maker & Card Design, you can create stunning invitations & greeting cards in just a few taps. No design skills needed—just choose, customize & share!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">SharedPreferences</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.textArtApp" target="_blank" class="project-link">
+        <i class="fab fa-google-play"></i> Play Store
+    </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+<i class="fas fa-heart"></i>                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Singles Connect App</h3>
+                        <p class="project-description">
+                            Singles Connect is an online dating and geosocial networking application. In Singles Connect, users “swipe right” to like or “swipe left” to dislike other users’ profiles, which include their photos, a short bio, and a list of their interests.
+Get matched with people and chat with them.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">API's</span>
+                            <span class="tech-tag">Location Services</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.single.connect.app.dating&hl=en" target="_blank" class="project-link">
+        <i class="fab fa-google-play"></i> Play Store
+    </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+<i class="fas fa-graduation-cap"></i>                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Lifeskills Link App</h3>
+                        <p class="project-description">
+The Lifeskills Link mobile app allows students to access assigned courses on both web and mobile platforms. Courses are organized into units with multiple learning pages, enabling students to complete courses and earn certifications upon completion.
+
+
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">API's</span>
+                            <span class="tech-tag">Dynamic Linking</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.lifeskillslink" target="_blank" class="project-link">
+        <i class="fab fa-google-play"></i> Play Store
+    </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+<i class="fas fa-envelope-open-text"></i>                      </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cover Highlights App</h3>
+                        <p class="project-description">
+                            Cover Highlights + Logo Maker is used to create covers for your daily highlights over instagram. With Cover highlights you can personalize your profile according to your choice by choosing or creating custom covers. Make your profile beautiful and attractive within minutes to make an impression on your followers.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">SharedPreferences</span>
+                            <span class="tech-tag">JSON</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.iapptechnologies.cover&hl=en-IN" target="_blank" class="project-link">
+        <i class="fab fa-google-play"></i> Play Store
+    </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+<i class="fas fa-golf-ball"></i>                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Golf Tuition Holidays Website</h3>
+                        <p class="project-description">
+                            Run by golfers, for golfers, and with an unrivalled and comprehensive knowledge of the regions, we are confident you will find The Golf Travel People to be the only real choice for your vacation in these areas. We have personal relationships with all the hotels and accommodation suppliers, golf courses and car rental companies we offer, which gives us in-depth knowledge and the ability to create truly flexible packages for every need.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Wordpress</span>
+                            <span class="tech-tag">Divi Builder</span>
+                        </div>
+                        <div class="project-links">
+    <a href="https://golftuitionholidays.co.uk/" target="_blank" class="project-link">
+        <i class="fas fa-globe"></i> Website
+    </a>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2024 - Present</div>
+                        <h3 class="timeline-title">Senior Flutter Developer</h3>
+                        <h4 class="timeline-company">Eminence Technology Pvt. Ltd. (Mohali)</h4>
+                        <ul class="timeline-description">
+        <li>Worked on a kids learning platform with parent activity tracking</li>
+                <li>Developed game experiences using Flutter and Unity</li>                    
+    <li>Built IoT solutions with BLE connectivity and smart remote control features</li>
+            <li>Implemented OTA updates with live content delivery</li>
+    <li>Created interactive features to improve app engagement</li>
+</ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2021 - Feb 2024</div>
+                        <h3 class="timeline-title">Android & Flutter Developer (Team Lead)</h3>
+                        <h4 class="timeline-company">iApp Technologies LLP (Mohali)</h4>
+                        <ul class="timeline-description">
+    <li>Started with the company's invitation maker product</li>
+    <li>Transitioned to Flutter for cross-platform development</li>
+    <li>Built and published Android and iOS applications</li>
+    <li>Worked with modern UI and state management solutions</li>
+    <li>Conducted Flutter interviews and trained interns</li>
+    <li>Led the Flutter team and managed project delivery</li>
+</ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2019 - Nov 2021</div>
+                        <h3 class="timeline-title">Android Developer (Team Lead)</h3>
+                        <h4 class="timeline-company">Omninos Solutions (Mohali)</h4>
+                         <ul class="timeline-description">
+    <li>Started Android development with Java and later transitioned to Kotlin</li>
+    <li>Built and maintained various Android applications across multiple domains</li>
+    <li>Specialized in short-video and live-streaming mobile platforms</li>
+    <li>Conducted technical interviews and mentored interns</li>
+    <li>Led the Android team, ensuring quality and timely delivery</li>
+</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017 - 2019</div>
+                        <h3 class="timeline-title">Master of Computer Applications</h3>
+                        <h4 class="timeline-company">Chandigarh University</h4>
+                        <ul class="timeline-description">
+                            <li>Computer Science and Engineering</li>
+                            <li>Specialized in software development and mobile applications</li>
+                            <li>Graduated with honors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2013 - 2016</div>
+                        <h3 class="timeline-title">Bachelor of Computer Applications</h3>
+                        <h4 class="timeline-company">Guru Nanak Dev University</h4>
+                        <ul class="timeline-description">
+                            <li>Information Technology specialization</li>
+                            <li>Focused on programming and web development</li>
+                            <li>Foundation for software engineering career</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in hearing about new opportunities and exciting projects. 
+                    Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>sohitsharma922@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mohali, Punjab. India</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://github.com/Sohit-Sharma" target="_blank" class="social-link-large">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sohit-sharma-940084172/" target="_blank" class="social-link-large">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:sohitsharma922@gmail.com" class="social-link-large">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form animate-on-scroll" id="contact-form" action="https://formspree.io/f/xrevygzn" method="POST">
+                    <input type="hidden" name="_next" value="thanks.html">
+                    <input type="hidden" name="_subject" value="New contact form submission from portfolio">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Sohit Sharma. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
+            </div>
+            <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
