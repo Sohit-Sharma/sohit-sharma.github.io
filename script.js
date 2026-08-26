@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeAnimations();
     initializeContactForm();
     initializeSkillBars();
+    initializeDotGrid();
 });
 
 // Theme Management
@@ -168,6 +169,110 @@ function initializeSkillBars() {
     skillBars.forEach(bar => {
         bar.style.width = '0%';
     });
+}
+
+// Interactive Dot Grid (Hero Background)
+function initializeDotGrid() {
+    const canvas = document.getElementById('dot-grid');
+    const heroSection = document.getElementById('home');
+    if (!canvas || !heroSection) return;
+
+    const ctx = canvas.getContext('2d');
+
+    const SPACING = 36;        // distance between dots (px)
+    const BASE_RADIUS = 1.4;   // resting dot size
+    const MAX_RADIUS = 3.2;    // dot size right under the cursor
+    const INFLUENCE = 140;     // how far the cursor effect reaches (px)
+    const EASE = 0.15;         // smoothing for grow/shrink animation
+
+    let dots = [];
+    let width = 0;
+    let height = 0;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const mouse = { x: -9999, y: -9999 };
+    let dotColor = getDotColor();
+
+    function getDotColor() {
+        return getComputedStyle(document.documentElement)
+            .getPropertyValue('--dot-rgb').trim() || '148, 163, 184';
+    }
+
+    function buildGrid() {
+        const rect = heroSection.getBoundingClientRect();
+        width = rect.width;
+        height = rect.height;
+
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        dots = [];
+        const cols = Math.ceil(width / SPACING) + 1;
+        const rows = Math.ceil(height / SPACING) + 1;
+
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < rows; j++) {
+                dots.push({
+                    x: i * SPACING,
+                    y: j * SPACING,
+                    radius: BASE_RADIUS,
+                    targetRadius: BASE_RADIUS
+                });
+            }
+        }
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = `rgb(${dotColor})`;
+
+        for (const dot of dots) {
+            const dx = dot.x - mouse.x;
+            const dy = dot.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            dot.targetRadius = dist < INFLUENCE
+                ? BASE_RADIUS + (MAX_RADIUS - BASE_RADIUS) * (1 - dist / INFLUENCE)
+                : BASE_RADIUS;
+
+            dot.radius += (dot.targetRadius - dot.radius) * EASE;
+
+            const growth = (dot.radius - BASE_RADIUS) / (MAX_RADIUS - BASE_RADIUS);
+            ctx.globalAlpha = Math.min(1, Math.max(0.35, 0.35 + 0.65 * growth));
+
+            ctx.beginPath();
+            ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+
+        requestAnimationFrame(draw);
+    }
+
+    heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+        mouse.x = -9999;
+        mouse.y = -9999;
+    });
+
+    window.addEventListener('resize', debounce(buildGrid, 150));
+
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            setTimeout(() => { dotColor = getDotColor(); }, 0);
+        });
+    }
+
+    buildGrid();
+    draw();
 }
 
 // Contact Form

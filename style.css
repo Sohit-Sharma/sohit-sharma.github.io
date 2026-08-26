@@ -51,6 +51,8 @@
     /* Typography */
     --font-primary: 'Inter', sans-serif;
     --font-mono: 'Fira Code', monospace;
+
+    --dot-rgb: 148, 163, 184; /* dot color for dark theme */
 }
 
 /* Global Styles */
@@ -84,6 +86,7 @@ body.light-theme {
     --border-color: var(--light-border-color);
     --card-bg: var(--light-card-bg);
     --glass-bg: var(--light-glass-bg);
+    --dot-rgb: 100, 116, 139; /* dot color for light theme */
 }
 
 /* Container */
@@ -384,6 +387,16 @@ body.light-theme {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.dot-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
 }
 
 .gradient-sphere {
