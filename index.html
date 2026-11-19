@@ -4,764 +4,1179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sohit Sharma - Mobile Application Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sohit Sharma — Mobile Application Developer</title>
+    <meta name="description"
+        content="Mobile Application Developer with 7 years of experience building high-performance Android, iOS and cross-platform mobile applications using Flutter, Dart, Kotlin, Java and Firebase.">
+    <meta name="keywords"
+        content="Mobile Application Developer, Flutter Developer, Android Developer, iOS Developer, Dart, Kotlin, Java, Firebase, Sohit Sharma, Mobile App Developer India">
+    <meta name="author" content="Sohit Sharma">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sohit Sharma — Mobile Application Developer">
+    <meta property="og:description"
+        content="Mobile Application Developer with 7 years of experience building scalable, high-performance mobile applications across Android and iOS.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sohit-sharma.github.io/">
+    <meta property="og:image" content="https://sohit-sharma.github.io/assets/images/hero.png">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="Sohit Sharma Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sohit Sharma — Mobile Application Developer">
+    <meta name="twitter:description"
+        content="7 years building high-performance mobile apps with Flutter, Android, Kotlin, Java & Firebase.">
+    <meta name="twitter:image" content="https://sohit-sharma.github.io/assets/images/hero.png">
+
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Sohit Sharma</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <a href="#hero" class="nav-logo" aria-label="Sohit Sharma — Home">
+                <span class="logo-mark">SS</span>
+                <span class="logo-name">Sohit Sharma</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="#hero" class="nav-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#expertise" class="nav-link" role="menuitem">Expertise</a></li>
+                <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#achievements" class="nav-link" role="menuitem">Achievements</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
-            <div class="nav-toggle" id="nav-toggle">
+            <a href="assets/images/cv.pdf" download class="nav-cv-btn">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon" id="theme-icon"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-                <canvas id="dot-grid" class="dot-grid"></canvas>
-            <div class="gradient-sphere"></div>
-            <div class="gradient-sphere"></div>
-            <div class="gradient-sphere"></div>
-        </div>
-        <!-- Floating Cards -->
-<div class="floating-card card-left-1">
-    <i class="fas fa-mobile-alt"></i>
-    <div>
-        <h4>80+</h4>
-        <span>Apps Built</span>
-    </div>
-</div>
-
-<div class="floating-card card-left-2">
-    <i class="fas fa-fire"></i>
-    <div>
-        <h4>6+</h4>
-        <span>Years Exp.</span>
-    </div>
-</div>
-
-<div class="floating-card card-right-1">
-    <i class="fas fa-users"></i>
-    <div>
-        <h4>1M+</h4>
-        <span>Users</span>
-    </div>
-</div>
-
-<div class="floating-card card-right-2">
-    <i class="fas fa-robot"></i>
-    <div>
-        <h4>AI</h4>
-        <span>Powered Apps</span>
-    </div>
-</div>
-        <div class="hero-content">
-            <h1 class="hero-title animate-fade-in">
-                Hi, I'm <span class="highlight">Sohit Sharma</span>
-            </h1>
-            <h2 class="hero-subtitle animate-fade-in animate-delay-1">
-                Mobile Application Developer
-            </h2>
-            <p class="hero-description animate-fade-in animate-delay-2">
-                Creating Scalable, High-Performance Flutter, iOS & Android Applications with AI-Driven Features
-            </p>
-            <div class="hero-buttons animate-fade-in animate-delay-3">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-code"></i> View Projects
-                </a>
-                <a href="assets/images/cv.pdf" download class="btn btn-secondary">
-                    <i class="fas fa-download"></i> Download CV
-                </a>
-                <!-- <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i> Contact Me
-                </a> -->
+    <main>
+        <!-- ==================== HERO ==================== -->
+        <section id="hero" class="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <canvas id="hero-particles-canvas" class="hero-particles-canvas"></canvas>
+                <div class="hero-mesh hero-mesh--1"></div>
+                <div class="hero-mesh hero-mesh--2"></div>
+                <div class="hero-mesh hero-mesh--3"></div>
+                <div class="hero-grid-pattern"></div>
             </div>
-            <div class="hero-social animate-fade-in animate-delay-4">
-                <a href="https://github.com/Sohit-Sharma" target="_blank" class="social-link" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/sohit-sharma-940084172/" target="_blank" class="social-link"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#contact" class="social-link" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">About Me</h2>
-            <div class="about-content">
-                <div class="about-text animate-on-scroll">
-                    <p>
-                        I'm a passionate Mobile App Developer with <strong>6+ years of experience</strong> in
-                        designing, developing, and deploying high-performance Android and cross-platform mobile
-                        applications. My expertise includes Flutter, Dart, Kotlin, Java, Firebase, REST APIs, GraphQL, CI/CD, Clean
-                        Architecture, and modern state management solutions such as BLoC, Riverpod, Provider, and GetX.
-                        I have successfully built scalable, user-centric applications across Education, AI, IoT, Social
-                        Networking, FinTech, Healthcare and Productivity domains.
+            <div class="hero-inner">
+                <!-- Left: Text -->
+                <div class="hero-text">
+                    <p class="hero-greeting anim-slide" style="--i:0">Hello, I'm</p>
+                    <h1 class="hero-name anim-slide" style="--i:1">Sohit Sharma</h1>
+                    <h2 class="hero-title anim-slide" style="--i:2">Mobile Application Developer</h2>
+                    <p class="hero-desc anim-slide" style="--i:3">
+                        Building intelligent, scalable and high-performance mobile experiences across Android and iOS.
                     </p>
 
-                    <p>
-                        Along with hands-on
-                        development, I have experience leading development teams, mentoring engineers, conducting
-                        technical interviews, and delivering high-quality applications from concept to deployment.
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">6+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">80+</span>
-                            <span class="stat-label">Mobile Apps</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1M+</span>
-                            <span class="stat-label">Users</span>
-                        </div>
+                    <div class="hero-availability anim-slide" style="--i:4">
+                        <span class="avail-dot"></span>
+                        Open to Mobile Development Opportunities
+                    </div>
+
+                    <div class="hero-stats anim-slide" style="--i:5">
+                        <span class="stat-badge"><i class="fas fa-briefcase"></i> 7 Years Experience</span>
+                        <span class="stat-badge"><i class="fas fa-layer-group"></i> Cross Platform Expertise</span>
+                    </div>
+
+                    <div class="hero-actions anim-slide" style="--i:6">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> View My Work
+                        </a>
+                        <a href="assets/images/cv.pdf" download class="btn btn-outline-light">
+                            <i class="fas fa-download"></i> Download My CV
+                        </a>
+                    </div>
+
+                    <div class="hero-social anim-slide" style="--i:7">
+                        <a href="https://www.linkedin.com/in/sohit-sharma-940084172/" target="_blank"
+                            rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/sohit-sharma" target="_blank" rel="noopener noreferrer"
+                            class="social-pill" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="about-image animate-on-scroll">
-                    <div class="image-container">
-                        <img src="assets/images/hero.png" alt="Sohit Sharma - Flutter Developer"
-                            class="about-profile-img">
+
+                <!-- Right: Animated Visual -->
+                <div class="hero-visual anim-slide" style="--i:3" aria-hidden="true">
+                    <!-- Gradient glow behind phone -->
+                    <div class="visual-glow"></div>
+
+                    <!-- Orbital rings -->
+                    <div class="orbit orbit--lg"></div>
+                    <div class="orbit orbit--md"></div>
+                    <div class="orbit orbit--sm"></div>
+
+                    <!-- Phone mockup -->
+                    <div class="phone" id="hero-phone">
+                        <!-- Hardware details -->
+                        <div class="phone-hardware">
+                            <div class="phone-island">
+                                <span class="island-camera"></span>
+                                <span class="island-dot"></span>
+                            </div>
+                            <div class="phone-btn-vol-up"></div>
+                            <div class="phone-btn-vol-down"></div>
+                            <div class="phone-btn-power"></div>
+                        </div>
+
+                        <!-- Active Realistic Phone Screen -->
+                        <div class="phone-screen">
+                            <!-- Status Bar -->
+                            <div class="app-status-bar">
+                                <span class="status-time">09:41</span>
+                                <div class="status-icons">
+                                    <i class="fas fa-signal"></i>
+                                    <i class="fas fa-wifi"></i>
+                                    <i class="fas fa-battery-full"></i>
+                                </div>
+                            </div>
+
+                            <!-- App Top Header -->
+                            <div class="app-header">
+                                <div class="app-user">
+                                    <div class="app-avatar">
+                                        <img src="assets/images/hero.png" alt="Sohit" />
+                                        <span class="avatar-status"></span>
+                                    </div>
+                                    <div class="app-user-info">
+                                        <span class="app-user-greeting">Welcome,</span>
+                                        <strong class="app-user-name">Sohit Sharma 👋</strong>
+                                    </div>
+                                </div>
+                                <div class="app-bell-btn">
+                                    <i class="far fa-bell"></i>
+                                    <span class="bell-badge"></span>
+                                </div>
+                            </div>
+
+                            <!-- Main AI / Mobile Core Card -->
+                            <div class="app-hero-card">
+                                <div class="hero-card-glow"></div>
+                                <div class="hero-card-top">
+                                    <span class="app-tag-pill"><i class="fas fa-sparkles"></i> AI Engine v3</span>
+                                    <span class="live-pulse-badge"><span class="dot"></span> 60 FPS</span>
+                                </div>
+                                <h4 class="hero-card-title">Cross-Platform Hub</h4>
+                                <p class="hero-card-subtitle">Flutter • Kotlin • Swift • BLE</p>
+
+                                <!-- Animated Soundwave / Spectrum Bars -->
+                                <div class="app-soundwave">
+                                    <span class="wave-bar"></span>
+                                    <span class="wave-bar"></span>
+                                    <span class="wave-bar"></span>
+                                    <span class="wave-bar"></span>
+                                    <span class="wave-bar"></span>
+                                    <span class="wave-bar"></span>
+                                    <span class="wave-bar"></span>
+                                    <span class="wave-bar"></span>
+                                </div>
+
+                                <div class="hero-card-footer">
+                                    <div class="metric-item">
+                                        <span class="metric-val">99.9%</span>
+                                        <span class="metric-lbl">Uptime</span>
+                                    </div>
+                                    <div class="metric-div"></div>
+                                    <div class="metric-item">
+                                        <span class="metric-val">12ms</span>
+                                        <span class="metric-lbl">Latency</span>
+                                    </div>
+                                    <div class="metric-div"></div>
+                                    <div class="metric-item">
+                                        <span class="metric-val">7 Yrs</span>
+                                        <span class="metric-lbl">Exp</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Real Products Mini Widgets -->
+                            <div class="app-modules-grid">
+                                <div class="app-mini-card">
+                                    <div class="mini-card-icon mini-card-icon--blue">
+                                        <i class="fas fa-tv"></i>
+                                    </div>
+                                    <div class="mini-card-content">
+                                        <span class="mini-card-title">Remoteo IoT</span>
+                                        <span class="mini-card-sub">Wi-Fi Connected</span>
+                                    </div>
+                                    <div class="mini-toggle active">
+                                        <span class="toggle-knob"></span>
+                                    </div>
+                                </div>
+                                <div class="app-mini-card">
+                                    <div class="mini-card-icon mini-card-icon--cyan">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="mini-card-content">
+                                        <span class="mini-card-title">Todemy AI</span>
+                                        <span class="mini-card-sub">Voice Active</span>
+                                    </div>
+                                    <div class="mini-audio-dot">
+                                        <span class="audio-ring"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Activity Deployment Snippet -->
+                            <div class="app-activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-label">Live Releases</span>
+                                    <span class="activity-status"><i class="fas fa-check-circle"></i> Production</span>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon"><i class="fab fa-google-play"></i></div>
+                                    <div class="activity-details">
+                                        <span class="activity-title">Android & iOS Published</span>
+                                        <span class="activity-meta">100k+ Downloads Total</span>
+                                    </div>
+                                    <span class="activity-badge">PROD</span>
+                                </div>
+                            </div>
+
+                            <!-- App Bottom Navigation Bar -->
+                            <div class="app-nav-bar">
+                                <div class="app-nav-item active">
+                                    <i class="fas fa-home"></i>
+                                    <span>Home</span>
+                                </div>
+                                <div class="app-nav-item">
+                                    <i class="fas fa-th-large"></i>
+                                    <span>Apps</span>
+                                </div>
+                                <div class="app-nav-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>IoT</span>
+                                </div>
+                                <div class="app-nav-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Profile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating tech cards -->
+                    <div class="float-card float-card--flutter">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M14.314 0L3.098 11.216l3.228 3.228L19.694 1.272h-5.38zM14.314 11.98l-5.26 5.26 3.228 3.228 2.034-2.034 5.258-5.26h-5.26z"
+                                fill="#1686D9" />
+                        </svg>
+                        <span>Flutter</span>
+                    </div>
+                    <div class="float-card float-card--android">
+                        <i class="fab fa-android"></i>
+                        <span>Android</span>
+                    </div>
+                    <div class="float-card float-card--ios">
+                        <i class="fab fa-apple"></i>
+                        <span>iOS</span>
+                    </div>
+                    <div class="float-card float-card--ai">
+                        <i class="fas fa-brain"></i>
+                        <span>AI</span>
+                    </div>
+
+                    <!-- Connecting lines SVG -->
+                    <svg class="connect-lines" viewBox="0 0 500 500" fill="none">
+                        <line x1="250" y1="150" x2="380" y2="100" stroke="url(#lineGrad)" stroke-width="1"
+                            opacity="0.3" />
+                        <line x1="250" y1="250" x2="120" y2="180" stroke="url(#lineGrad)" stroke-width="1"
+                            opacity="0.25" />
+                        <line x1="250" y1="350" x2="400" y2="380" stroke="url(#lineGrad)" stroke-width="1"
+                            opacity="0.2" />
+                        <line x1="250" y1="250" x2="130" y2="380" stroke="url(#lineGrad)" stroke-width="1"
+                            opacity="0.2" />
+                        <defs>
+                            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#1686D9" stop-opacity="0.6" />
+                                <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="scroll-hint" aria-hidden="true">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT ==================== -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-heading reveal">
+                    <span class="section-tag">About Me</span>
+                    Professional Summary
+                </h2>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>
+                            I am a Mobile Application Developer with <strong>7 years of experience</strong> designing,
+                            developing and deploying high-performance native Android, iOS and cross-platform mobile
+                            applications.
+                        </p>
+                        <p>
+                            My expertise spans <strong>Flutter, Dart, Kotlin, Java, Firebase, REST APIs, GraphQL,
+                                Clean Architecture</strong> and modern state management solutions.
+                        </p>
+                        <p>
+                            I have contributed to products across <strong>Education, E-Commerce, AI, IoT, Social
+                                Networking, FinTech, Healthcare</strong> and <strong>Productivity</strong> domains.
+                        </p>
+                        <p>
+                            Alongside development, I have experience leading engineering teams, mentoring developers,
+                            conducting technical interviews and delivering production-ready applications.
+                        </p>
+                        <div class="about-domains">
+                            <span class="domain-tag">Education</span>
+                            <span class="domain-tag">E-Commerce</span>
+                            <span class="domain-tag">AI</span>
+                            <span class="domain-tag">IoT</span>
+                            <span class="domain-tag">Social Networking</span>
+                            <span class="domain-tag">FinTech</span>
+                            <span class="domain-tag">Healthcare</span>
+                            <span class="domain-tag">Productivity</span>
+                        </div>
+                    </div>
+                    <div class="about-image reveal">
+                        <div class="profile-frame">
+                            <img src="assets/images/hero.png" alt="Sohit Sharma — Mobile Application Developer"
+                                width="320" height="320" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category animate-on-scroll">
-                    <h3 class="category-title">
-                        <i class="fas fa-code"></i> Languages
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Dart</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
+        <!-- ==================== EXPERTISE ==================== -->
+        <section id="expertise" class="section section--alt">
+            <div class="container">
+                <h2 class="section-heading reveal">
+                    <span class="section-tag">What I Work With</span>
+                    Technical Expertise
+                </h2>
+                <div class="expertise-grid">
+                    <!-- Programming Languages -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-code"></i></div>
+                        <h3 class="expertise-title">Programming Languages</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Swift</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Kotlin</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
+                    </div>
+                    <!-- Mobile Development -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="expertise-title">Mobile Development</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Android Native</span>
+                            <span class="tech-tag">iOS</span>
+                            <span class="tech-tag">Responsive UI</span>
+                            <span class="tech-tag">Adaptive Layouts</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
+                    </div>
+                    <!-- State Management -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3 class="expertise-title">State Management</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">BLoC</span>
+                            <span class="tech-tag">Riverpod</span>
+                            <span class="tech-tag">Provider</span>
+                            <span class="tech-tag">GetX</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
+                    </div>
+                    <!-- Architecture -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-cubes"></i></div>
+                        <h3 class="expertise-title">Architecture</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Clean Architecture</span>
+                            <span class="tech-tag">MVVM</span>
+                            <span class="tech-tag">SOLID Principles</span>
+                            <span class="tech-tag">Repository Pattern</span>
+                        </div>
+                    </div>
+                    <!-- Backend & Networking -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-server"></i></div>
+                        <h3 class="expertise-title">Backend & Networking</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">Socket.IO</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">JSON</span>
+                        </div>
+                    </div>
+                    <!-- Firebase -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-fire"></i></div>
+                        <h3 class="expertise-title">Firebase</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Authentication</span>
+                            <span class="tech-tag">Firestore</span>
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">Cloud Messaging</span>
+                            <span class="tech-tag">Crashlytics</span>
+                            <span class="tech-tag">Hosting</span>
+                        </div>
+                    </div>
+                    <!-- Databases -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-database"></i></div>
+                        <h3 class="expertise-title">Databases</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Hive</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">SharedPreferences</span>
+                            <span class="tech-tag">Secure Storage</span>
+                            <span class="tech-tag">Offline Data Sync</span>
+                        </div>
+                    </div>
+                    <!-- Integrations -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-plug"></i></div>
+                        <h3 class="expertise-title">Integrations</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Agora</span>
+                            <span class="tech-tag">ZegoLive</span>
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">BLE</span>
+                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Maps</span>
+                            <span class="tech-tag">Camera SDKs</span>
+                            <span class="tech-tag">Voice & Video SDKs</span>
+                        </div>
+                    </div>
+                    <!-- Payment Integration -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-credit-card"></i></div>
+                        <h3 class="expertise-title">Payment Integration</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Razorpay</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">Cashfree</span>
+                            <span class="tech-tag">Square</span>
+                            <span class="tech-tag">Apple Pay</span>
+                            <span class="tech-tag">In-App Purchases</span>
+                        </div>
+                    </div>
+                    <!-- Testing -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-vial"></i></div>
+                        <h3 class="expertise-title">Testing</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Unit Testing</span>
+                            <span class="tech-tag">Widget Testing</span>
+                            <span class="tech-tag">Integration Testing</span>
+                            <span class="tech-tag">Mocktail</span>
+                        </div>
+                    </div>
+                    <!-- DevOps & Tools -->
+                    <div class="expertise-card reveal">
+                        <div class="expertise-icon"><i class="fas fa-tools"></i></div>
+                        <h3 class="expertise-title">DevOps & Tools</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">GitHub</span>
+                            <span class="tech-tag">GitLab</span>
+                            <span class="tech-tag">Bitbucket</span>
+                            <span class="tech-tag">Codemagic</span>
+                            <span class="tech-tag">Fastlane</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Android Studio</span>
+                            <span class="tech-tag">Xcode</span>
+                            <span class="tech-tag">VS Code</span>
+                            <span class="tech-tag">Postman</span>
+                            <span class="tech-tag">Swagger</span>
+                            <span class="tech-tag">Figma</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="skill-category animate-on-scroll">
-                    <h3 class="category-title">
-                        <i class="fas fa-layer-group"></i> Tech Stack
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Flutter</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
+        <!-- ==================== EXPERIENCE ==================== -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-heading reveal">
+                    <span class="section-tag">Career Journey</span>
+                    Professional Experience
+                </h2>
+                <div class="timeline">
+                    <!-- Eminence Technology -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Android</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> February 2024 — July
+                                    2026</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">iOS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Firebase</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
+                            <h3 class="timeline-role">Senior Flutter Developer</h3>
+                            <h4 class="timeline-company"><i class="fas fa-building"></i> Eminence Technology Pvt. Ltd. ·
+                                Mohali, India</h4>
+                            <ul class="timeline-points">
+                                <li>Developed AI-powered and IoT-enabled Flutter applications for Android and iOS.</li>
+                                <li>Built a Smart TV Remote application supporting multiple TV brands over Wi-Fi.</li>
+                                <li>Integrated BLE communication, OTA updates, Speech-to-Text, heartbeat detection and
+                                    Remote Config.</li>
+                                <li>Developed interactive educational games and integrated Unity modules into Flutter.
+                                </li>
+                                <li>Built chatbot-based mobile applications using AI APIs.</li>
+                                <li>Worked across AI, Education, IoT, Healthcare and Productivity domains.</li>
+                                <li>Mentored junior developers and participated in technical design discussions.</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">AI</span>
+                                <span class="tech-tag tech-tag--sm">IoT</span>
+                                <span class="tech-tag tech-tag--sm">BLE</span>
+                                <span class="tech-tag tech-tag--sm">Unity</span>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="skill-category animate-on-scroll">
-                    <h3 class="category-title">
-                        <i class="fas fa-database"></i> Architecture
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">GetX</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
+                    <!-- iApp Technologies -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Provider</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> November 2021 — February
+                                    2024</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Riverpod</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">BLoC</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <h3 class="timeline-role">Senior Flutter Developer</h3>
+                            <h4 class="timeline-company"><i class="fas fa-building"></i> iApp Technologies LLP · Mohali,
+                                India</h4>
+                            <ul class="timeline-points">
+                                <li>Transitioned from native Android to cross-platform Flutter development.</li>
+                                <li>Implemented scalable state management using GetX, Provider, Riverpod and BLoC.</li>
+                                <li>Integrated payment gateways, Firebase services, Maps, notifications and analytics.
+                                </li>
+                                <li>Developed and maintained production Flutter applications.</li>
+                                <li>Handled Flutter development teams and mentored junior engineers.</li>
+                                <li>Conducted technical interviews and onboarding sessions.</li>
+                                <li>Published Android and iOS applications.</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">Firebase</span>
+                                <span class="tech-tag tech-tag--sm">Payments</span>
+                                <span class="tech-tag tech-tag--sm">Team Lead</span>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="skill-category animate-on-scroll">
-                    <h3 class="category-title">
-                        <i class="fas fa-tools"></i> Tools
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Android Studio</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
+                    <!-- Omninos Solutions -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Xcode</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> November 2019 — November
+                                    2021</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">VsCode</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Cursor + Antigravity</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <h3 class="timeline-role">Android Developer</h3>
+                            <h4 class="timeline-company"><i class="fas fa-building"></i> Omninos Solutions · Mohali,
+                                India</h4>
+                            <ul class="timeline-points">
+                                <li>Developed native Android applications using Java and Kotlin.</li>
+                                <li>Built live streaming and social networking applications.</li>
+                                <li>Integrated Agora, Meishe, Banuba and messaging SDKs.</li>
+                                <li>Handled Android development teams and mentored interns.</li>
+                                <li>Optimized application performance and resolved production issues.</li>
+                            </ul>
+                            <div class="timeline-tech">
+                                <span class="tech-tag tech-tag--sm">Android</span>
+                                <span class="tech-tag tech-tag--sm">Java</span>
+                                <span class="tech-tag tech-tag--sm">Kotlin</span>
+                                <span class="tech-tag tech-tag--sm">Agora</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
+        <!-- ==================== PROJECTS ==================== -->
+        <section id="projects" class="section section--alt">
+            <div class="container">
+                <h2 class="section-heading reveal">
+                    <span class="section-tag">What I've Built</span>
+                    Featured Projects
+                </h2>
+                <div class="projects-grid">
+
+                    <!-- Invitation Maker -->
+                    <article class="project-card reveal">
+                        <div class="project-visual project-visual--violet">
                             <i class="fas fa-envelope-open-text"></i>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Invitation Maker App</h3>
-                        <p class="project-description">
-                            Invitation Maker Card Design gives you Free Professional invitation card templates which you
-                            can use for your event, parties or any occasion. It is easier to make any card.
-                            With Invitation Maker & Card Design, you can create stunning invitations & greeting cards in
-                            just a few taps. No design skills needed—just choose, customize & share!
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">JSON</span>
-                            <span class="tech-tag">SharedPreferences</span>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-category">Card Design App</span>
+                            </div>
+                            <h3 class="project-name">Invitation Maker App</h3>
+                            <p class="project-desc">
+                                Template-based invitation editor supporting JPEG, PDF, GIF and video export with
+                                advanced transformations, animations and In-App Purchases.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">In-App Purchases</span>
+                                <span class="tech-tag tech-tag--sm">Image Processing</span>
+                                <span class="tech-tag tech-tag--sm">Animations</span>
+                            </div>
+                            <div class="project-expanded">
+                                <h4><i class="fas fa-layer-group"></i> Architecture & Engineering Highlights</h4>
+                                <ul>
+                                    <li>Architected high-performance canvas editing pipeline with real-time
+                                        gesture-based scaling & rotation.</li>
+                                    <li>Implemented multi-format export engines delivering optimized high-resolution
+                                        JPEG, PDF, GIF, and MP4.</li>
+                                    <li>Engineered store monetization with cross-platform In-App Purchases and receipt
+                                        validation.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="project-links">
                             <a href="https://play.google.com/store/apps/details?id=com.textArtApp" target="_blank"
-                                class="project-btn">
-                                <i class="fab fa-google-play"></i>
-                                Play Store
+                                rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-google-play"></i> Play Store
                             </a>
-
+                            <button class="project-details-btn" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
                         </div>
+                    </article>
 
-                    </div>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
+                    <!-- Remoteo -->
+                    <article class="project-card reveal">
+                        <div class="project-visual project-visual--blue">
                             <i class="fas fa-tv"></i>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Remoteo App</h3>
-                        <p class="project-description">
-                            Smart TV Remote Control – Developed an IoT-based Smart TV Remote application that enables
-                            users to control multiple Smart TV brands over a local Wi-Fi network using their mobile
-                            devices. Implemented features including device discovery, pairing, power, volume, channel,
-                            navigation, media playback, and keyboard input for seamless TV interaction.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">IOT</span>
-                            <span class="tech-tag">Wi-Fi</span>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-category">IoT Smart TV Remote</span>
+                            </div>
+                            <h3 class="project-name">Remoteo App</h3>
+                            <p class="project-desc">
+                                IoT-based Smart TV Remote application supporting multiple TV brands.
+                                Features local Wi-Fi discovery and pairing, power, volume and channel
+                                controls, navigation, media playback, keyboard input and device
+                                connectivity management.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">IoT</span>
+                                <span class="tech-tag tech-tag--sm">Wi-Fi</span>
+                                <span class="tech-tag tech-tag--sm">BLE</span>
+                            </div>
+                            <div class="project-expanded">
+                                <h4><i class="fas fa-layer-group"></i> Architecture & Engineering Highlights</h4>
+                                <ul>
+                                    <li>Integrated SSDP and mDNS protocols for rapid zero-configuration TV discovery on
+                                        local Wi-Fi.</li>
+                                    <li>Built resilient bidirectional WebSocket and HTTP REST dispatchers for
+                                        low-latency TV control.</li>
+                                    <li>Implemented BLE fallback pairing and device state caching for instant app
+                                        reconnection.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="project-links">
                             <a href="https://play.google.com/store/apps/details?id=com.remoteo.tv.control&hl=en_IN"
-                                target="_blank" class="project-btn">
+                                target="_blank" rel="noopener noreferrer" class="project-link">
                                 <i class="fab fa-google-play"></i> Play Store
                             </a>
+                            <button class="project-details-btn" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-graduation-cap"></i>
+                    <!-- Lifeskills Link -->
+                    <article class="project-card reveal">
+                        <div class="project-visual project-visual--cyan">
+                            <i class="fas fa-book-open"></i>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Lifeskills Link App</h3>
-                        <p class="project-description">
-                            The Lifeskills Link mobile app allows students to access assigned courses on both web and
-                            mobile platforms. Courses are organized into units with multiple learning pages, enabling
-                            students to complete courses and earn certifications upon completion.
-
-
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">API's</span>
-                            <span class="tech-tag">Dynamic Linking</span>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-category">Education Platform</span>
+                            </div>
+                            <h3 class="project-name">Lifeskills Link App</h3>
+                            <p class="project-desc">
+                                Educational platform that allows students to access assigned courses through web and
+                                mobile. Features course units, learning pages, course completion and certifications.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">APIs</span>
+                                <span class="tech-tag tech-tag--sm">Deep Linking</span>
+                            </div>
+                            <div class="project-expanded">
+                                <h4><i class="fas fa-layer-group"></i> Architecture & Engineering Highlights</h4>
+                                <ul>
+                                    <li>Architected multi-unit course syllabus engine with modular content rendering and
+                                        video streaming.</li>
+                                    <li>Configured dynamic links enabling seamless cross-platform handoff from web
+                                        assignments to mobile.</li>
+                                    <li>Implemented automated course completion verification and dynamic PDF certificate
+                                        generation.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="project-links">
                             <a href="https://play.google.com/store/apps/details?id=com.lifeskillslink" target="_blank"
-                                class="project-btn">
+                                rel="noopener noreferrer" class="project-link">
                                 <i class="fab fa-google-play"></i> Play Store
                             </a>
                             <a href="https://apps.apple.com/us/app/lifeskills-link/id6478844930" target="_blank"
-                                class="project-btn">
-                                <i class="fab fa-app-store-ios"></i>
-                                App Store
+                                rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-app-store-ios"></i> App Store
                             </a>
+                            <button class="project-details-btn" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
+                    <!-- Todemy -->
+                    <article class="project-card reveal">
+                        <div class="project-visual project-visual--green">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Todemy App</h3>
-                        <p class="project-description">
-                            Developed the Todemy kids learning app (for ages 2–7 years) with separate Parent and Kids
-                            modules to support early childhood learning and monitoring. The Kids section includes
-                            interactive learning through games, videos, and offline activities, along with a voice-based
-                            AI avatar for real-time communication and storytelling features.
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">VoiceBot</span>
-                            <span class="tech-tag">ChatBot</span>
-                            <span class="tech-tag">Games</span>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-category">Kids Learning Platform</span>
+                            </div>
+                            <h3 class="project-name">Todemy App</h3>
+                            <p class="project-desc">
+                                Kids learning platform for children aged 2–7 with Parent and Kids modules.
+                                Features interactive games and videos, offline learning activities,
+                                AI-powered voice avatar, AI chatbot, child progress tracking,
+                                SmartCare with heartbeat tracking, BMI, smart meal suggestions and
+                                vaccination management.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">AI</span>
+                                <span class="tech-tag tech-tag--sm">Unity</span>
+                                <span class="tech-tag tech-tag--sm">Healthcare</span>
+                            </div>
+                            <div class="project-expanded">
+                                <h4><i class="fas fa-layer-group"></i> Architecture & Engineering Highlights</h4>
+                                <ul>
+                                    <li>Integrated interactive AI voice avatar for responsive kid storytelling and
+                                        speech engagement.</li>
+                                    <li>Embedded Unity 3D game engine inside Flutter via Platform Channels with two-way
+                                        messaging.</li>
+                                    <li>Built comprehensive SmartCare module tracking pediatric milestones, BMI, and
+                                        vital signs.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.todemy.app"
-                                target="_blank" class="project-btn">
+                            <a href="https://play.google.com/store/apps/details?id=com.todemy.app" target="_blank"
+                                rel="noopener noreferrer" class="project-link">
                                 <i class="fab fa-google-play"></i> Play Store
                             </a>
                             <a href="https://apps.apple.com/us/app/todemy/id6751180793" target="_blank"
-                                class="project-btn">
-                                <i class="fab fa-app-store-ios"></i>
-                                App Store
+                                rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-app-store-ios"></i> App Store
                             </a>
+                            <button class="project-details-btn" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
+                    <!-- BindassBolo -->
+                    <article class="project-card reveal">
+                        <div class="project-visual project-visual--orange">
                             <i class="fas fa-language"></i>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">BindassBolo App</h3>
-                        <p class="project-description">
-                            Developed an English learning app with Student and Coach roles, enabling course purchase via
-                            In-App Purchases. Built features like self-practice (listen & compare audio), daily
-                            vocabulary. Implemented peer chat, audio calling, and slot booking for coaching sessions.
-                            Integrated live classes using Google Meet SDK to support real-time learning.
-
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">API's</span>
-                            <span class="tech-tag">Google Meet SDK</span>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-category">English Learning Platform</span>
+                            </div>
+                            <h3 class="project-name">BindassBolo App</h3>
+                            <p class="project-desc">
+                                English learning platform with Student and Coach roles. Features course
+                                purchases through In-App Purchases, audio practice and comparison, daily
+                                vocabulary, peer chat and audio calling, coaching slot booking and
+                                Google Meet SDK integration for live classes.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">Google Meet SDK</span>
+                                <span class="tech-tag tech-tag--sm">In-App Purchases</span>
+                                <span class="tech-tag tech-tag--sm">Audio</span>
+                            </div>
+                            <div class="project-expanded">
+                                <h4><i class="fas fa-layer-group"></i> Architecture & Engineering Highlights</h4>
+                                <ul>
+                                    <li>Integrated Google Meet SDK for seamless scheduling and launching of live
+                                        coaching sessions.</li>
+                                    <li>Built custom audio recording & playback system for comparative pronunciation
+                                        analysis.</li>
+                                    <li>Designed real-time messaging, audio calling, and slot reservation pipelines.
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="project-links">
                             <a href="https://play.google.com/store/apps/details?id=com.bindass.bindassbolo&hl=en_IN"
-                                target="_blank" class="project-btn">
+                                target="_blank" rel="noopener noreferrer" class="project-link">
                                 <i class="fab fa-google-play"></i> Play Store
                             </a>
+                            <button class="project-details-btn" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-heart"></i>
+                    <!-- Image Masking Plugin -->
+                    <article class="project-card reveal">
+                        <div class="project-visual project-visual--purple">
+                            <i class="fas fa-puzzle-piece"></i>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Singles Connect App</h3>
-                        <p class="project-description">
-                            Singles Connect is an online dating and geosocial networking application. In Singles
-                            Connect, users “swipe right” to like or “swipe left” to dislike other users’ profiles, which
-                            include their photos, a short bio, and a list of their interests.
-                            Get matched with people and chat with them.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">API's</span>
-                            <span class="tech-tag">Location Services</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.single.connect.app.dating&hl=en"
-                                target="_blank" class="project-btn">
-                                <i class="fab fa-google-play"></i> Play Store
-                            </a>
-                            <a href="https://apps.apple.com/us/app/singles-connect/id6466390560" target="_blank"
-                                class="project-btn">
-                                <i class="fab fa-app-store-ios"></i>
-                                App Store
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-envelope-open-text"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Cover Highlights App</h3>
-                        <p class="project-description">
-                            Cover Highlights + Logo Maker is used to create covers for your daily highlights over
-                            instagram. With Cover highlights you can personalize your profile according to your choice
-                            by choosing or creating custom covers. Make your profile beautiful and attractive within
-                            minutes to make an impression on your followers.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">SharedPreferences</span>
-                            <span class="tech-tag">JSON</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.iapptechnologies.cover&hl=en-IN"
-                                target="_blank" class="project-btn">
-                                <i class="fab fa-google-play"></i> Play Store
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Image Masking Flutter (Plugin)</h3>
-                        <p class="project-description">
-                            The Image Masking Flutter Plugin allows developers to create an interactive image reveal
-                            effect. It allows users to interactively reveal or color an image by dragging their fingers
-                            across the screen. It is especially useful for kids' learning and entertainment apps,
-                            allowing children to trace, color, and reveal images through touch interactions.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Plugin</span>
-                            <span class="tech-tag">Image-Masking</span>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-category">Open-Source Flutter Plugin</span>
+                            </div>
+                            <h3 class="project-name">Image Masking Flutter Plugin</h3>
+                            <p class="project-desc">
+                                Reusable Flutter plugin for interactive image reveal and colouring.
+                                Features touch-based image reveal, interactive colouring and a
+                                reusable Flutter component for the developer community.
+                            </p>
+                            <div class="project-stack">
+                                <span class="tech-tag tech-tag--sm">Flutter</span>
+                                <span class="tech-tag tech-tag--sm">Plugin</span>
+                                <span class="tech-tag tech-tag--sm">CustomPainter</span>
+                                <span class="tech-tag tech-tag--sm">Open Source</span>
+                            </div>
+                            <div class="project-expanded">
+                                <h4><i class="fas fa-layer-group"></i> Architecture & Engineering Highlights</h4>
+                                <ul>
+                                    <li>Authored custom Skia / Impeller paint shaders supporting high frame-rate
+                                        scratch-and-reveal touch interaction.</li>
+                                    <li>Engineered lightweight API consumed by developers worldwide on pub.dev.</li>
+                                    <li>Maintained 100% test coverage with automated CI validation across Flutter SDK
+                                        versions.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="project-links">
                             <a href="https://pub.dev/packages/image_masking_flutter" target="_blank"
-                                class="project-btn">
-                                <i class="fas fa-cube"></i> View Plugin
+                                rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-cube"></i> View on pub.dev
+                            </a>
+                            <button class="project-details-btn" aria-expanded="false">
+                                <i class="fas fa-info-circle"></i> View Details
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WHAT I BRING ==================== -->
+        <section id="capabilities" class="section">
+            <div class="container">
+                <h2 class="section-heading reveal">
+                    <span class="section-tag">Value I Add</span>
+                    What I Bring to a Development Team
+                </h2>
+                <div class="capabilities-grid">
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--blue"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Cross-Platform Development</h3>
+                        <p>Building and shipping polished applications for both Android and iOS from a single Flutter
+                            codebase, ensuring native-quality performance on each platform.</p>
+                    </div>
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--violet"><i class="fas fa-robot"></i></div>
+                        <h3>AI & Chatbot Integrations</h3>
+                        <p>Integrating AI-powered features such as voice avatars, chatbots, speech-to-text and
+                            intelligent conversational experiences into mobile applications.</p>
+                    </div>
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--cyan"><i class="fas fa-wifi"></i></div>
+                        <h3>IoT & BLE Communication</h3>
+                        <p>Building IoT-enabled applications with Bluetooth Low Energy communication, local network
+                            device discovery, pairing protocols and real-time device control.</p>
+                    </div>
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--blue"><i class="fas fa-comments"></i></div>
+                        <h3>Real-Time Communication</h3>
+                        <p>Implementing peer-to-peer chat, audio/video calling and live class features using WebSockets,
+                            Socket.IO, Agora and Google Meet SDK integration.</p>
+                    </div>
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--violet"><i class="fas fa-credit-card"></i></div>
+                        <h3>Payment & Third-Party Integrations</h3>
+                        <p>Integrating payment gateways (Razorpay, Stripe, Cashfree, Apple Pay), In-App Purchases,
+                            Maps, analytics and camera SDKs into production applications.</p>
+                    </div>
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--cyan"><i class="fas fa-cubes"></i></div>
+                        <h3>Mobile App Architecture</h3>
+                        <p>Designing scalable application architectures using Clean Architecture, MVVM, Repository
+                            Pattern and SOLID principles for maintainable, testable codebases.</p>
+                    </div>
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--blue"><i class="fas fa-rocket"></i></div>
+                        <h3>App Publishing & Release Management</h3>
+                        <p>End-to-end application publishing on Google Play Store and Apple App Store, managing CI/CD
+                            pipelines, code signing and store compliance.</p>
+                    </div>
+                    <div class="capability-card reveal">
+                        <div class="capability-icon capability-icon--violet"><i class="fas fa-users"></i></div>
+                        <h3>Technical Leadership & Mentoring</h3>
+                        <p>Leading development teams, mentoring junior engineers and interns, conducting technical
+                            interviews and driving engineering best practices across projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ACHIEVEMENTS ==================== -->
+        <section id="achievements" class="section section--alt">
+            <div class="container">
+                <h2 class="section-heading reveal">
+                    <span class="section-tag">Recognition</span>
+                    Achievements & Leadership
+                </h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                        <div class="achievement-content">
+                            <h3>Rising Star Award</h3>
+                            <p class="achievement-org">iApp Technologies LLP</p>
+                            <p class="achievement-desc">Recognized for exceptional performance, rapid growth and
+                                significant contributions to the development team.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                        <div class="achievement-content">
+                            <h3>Employee of the Month (Twice)</h3>
+                            <p class="achievement-org">iApp Technologies LLP</p>
+                            <p class="achievement-desc">Awarded twice for consistent delivery of high-quality work,
+                                team collaboration and project excellence.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="achievement-content">
+                            <h3>Android Team Leadership</h3>
+                            <p class="achievement-org">Omninos Solutions</p>
+                            <p class="achievement-desc">Led the Android development team, managing project delivery,
+                                code quality standards and team mentoring.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="achievement-content">
+                            <h3>Flutter Team Leadership</h3>
+                            <p class="achievement-org">iApp Technologies LLP</p>
+                            <p class="achievement-desc">Led the Flutter team through cross-platform transitions,
+                                managing end-to-end project delivery for Android and iOS.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="achievement-content">
+                            <h3>Flutter Team Leadership</h3>
+                            <p class="achievement-org">Eminence Technology Pvt. Ltd.</p>
+                            <p class="achievement-desc">Led Flutter development across AI, IoT, Education and
+                                Healthcare projects, driving technical decisions and team growth.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card reveal">
+                        <div class="achievement-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="achievement-content">
+                            <h3>Mentoring & Technical Interviews</h3>
+                            <p class="achievement-org">Across Organizations</p>
+                            <p class="achievement-desc">Mentored interns and junior developers, conducted technical
+                                interviews and led onboarding sessions to build strong engineering teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EDUCATION ==================== -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-heading reveal">
+                    <span class="section-tag">Academic Background</span>
+                    Education
+                </h2>
+                <div class="education-grid">
+                    <div class="education-card reveal">
+                        <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="education-body">
+                            <span class="education-date">2017 — 2019</span>
+                            <h3 class="education-degree">Master of Computer Applications</h3>
+                            <h4 class="education-school">Chandigarh University</h4>
+                            <p class="education-detail">Computer Science and Engineering — Specialised in software
+                                development and mobile applications.</p>
+                        </div>
+                    </div>
+                    <div class="education-card reveal">
+                        <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="education-body">
+                            <span class="education-date">2013 — 2016</span>
+                            <h3 class="education-degree">Bachelor of Computer Applications</h3>
+                            <h4 class="education-school">G.N.D.U. Amritsar</h4>
+                            <p class="education-detail">Information Technology — Focused on programming and software
+                                development fundamentals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section id="contact" class="section section--cta">
+            <div class="container">
+                <div class="cta-header reveal">
+                    <h2 class="cta-heading">Have a Mobile App Project or an Opportunity in Mind?</h2>
+                    <p class="cta-subtext">
+                        Let's connect and discuss how my mobile development experience can contribute to building
+                        great products.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:sohitsharma922@gmail.com">sohitsharma922@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/sohit-sharma-940084172/" target="_blank"
+                                    rel="noopener noreferrer">linkedin.com/in/sohit-sharma</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/sohit-sharma" target="_blank"
+                                    rel="noopener noreferrer">github.com/sohit-sharma</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Mohali, India</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-buttons">
+                            <a href="assets/images/cv.pdf" download class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                            <a href="mailto:sohitsharma922@gmail.com" class="btn btn-outline-light">
+                                <i class="fas fa-envelope"></i> Contact Me
                             </a>
                         </div>
                     </div>
-                </div>
 
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-golf-ball"></i>
+                    <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/xrevygzn"
+                        method="POST">
+                        <input type="hidden" name="_next" value="thanks.html">
+                        <input type="hidden" name="_subject" value="New contact from portfolio">
+                        <input type="text" name="_gotcha" style="display:none">
+                        <h3 class="form-title">Send a Message</h3>
+                        <div class="form-field">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Golf Tuition Holidays Website</h3>
-                        <p class="project-description">
-                            Run by golfers, for golfers, and with an unrivalled and comprehensive knowledge of the
-                            regions, we are confident you will find The Golf Travel People to be the only real choice
-                            for your vacation in these areas. We have personal relationships with all the hotels and
-                            accommodation suppliers, golf courses and car rental companies we offer, which gives us
-                            in-depth knowledge and the ability to create truly flexible packages for every need.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Wordpress</span>
-                            <span class="tech-tag">Divi Builder</span>
+                        <div class="form-field">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
                         </div>
-                        <div class="project-links">
-                            <a href="https://golftuitionholidays.co.uk/" target="_blank" class="project-btn">
-                                <i class="fas fa-globe"></i> Visit Website
-                            </a>
+                        <div class="form-field">
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
                         </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Feb 2024 - Jul 2026</div>
-                        <h3 class="timeline-title">Senior Flutter Developer</h3>
-                        <h4 class="timeline-company">Eminence Technology Pvt. Ltd. (Mohali)</h4>
-                        <ul class="timeline-description">
-                            <li>Worked on a kids learning platform with parent activity tracking</li>
-                            <li>Developed game experiences using Flutter and Unity</li>
-                            <li>Built IoT solutions with BLE connectivity and smart remote control features</li>
-                            <li>Implemented OTA updates with live content delivery</li>
-                            <li>Created interactive features to improve app engagement</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Nov 2021 - Feb 2024</div>
-                        <h3 class="timeline-title">Android & Flutter Developer (Team Lead)</h3>
-                        <h4 class="timeline-company">iApp Technologies LLP (Mohali)</h4>
-                        <ul class="timeline-description">
-                            <li>Started with the company's invitation maker product</li>
-                            <li>Transitioned to Flutter for cross-platform development</li>
-                            <li>Built and published Android and iOS applications</li>
-                            <li>Worked with modern UI and state management solutions</li>
-                            <li>Conducted Flutter interviews and trained interns</li>
-                            <li>Led the Flutter team and managed project delivery</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">Nov 2019 - Nov 2021</div>
-                        <h3 class="timeline-title">Android Developer (Team Lead)</h3>
-                        <h4 class="timeline-company">Omninos Solutions (Mohali)</h4>
-                        <ul class="timeline-description">
-                            <li>Started Android development with Java and later transitioned to Kotlin</li>
-                            <li>Built and maintained various Android applications across multiple domains</li>
-                            <li>Specialized in short-video and live-streaming mobile platforms</li>
-                            <li>Conducted technical interviews and mentored interns</li>
-                            <li>Led the Android team, ensuring quality and timely delivery</li>
-                        </ul>
-                    </div>
+                        <button type="submit" class="btn btn-primary btn--full">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2017 - 2019</div>
-                        <h3 class="timeline-title">Master of Computer Applications</h3>
-                        <h4 class="timeline-company">Chandigarh University</h4>
-                        <ul class="timeline-description">
-                            <li>Computer Science and Engineering</li>
-                            <li>Specialized in software development and mobile applications</li>
-                            <li>Graduated with honors</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2013 - 2016</div>
-                        <h3 class="timeline-title">Bachelor of Computer Applications</h3>
-                        <h4 class="timeline-company">Guru Nanak Dev University</h4>
-                        <ul class="timeline-description">
-                            <li>Information Technology specialization</li>
-                            <li>Focused on programming and web development</li>
-                            <li>Foundation for software engineering career</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info animate-on-scroll">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in hearing about new opportunities and exciting projects.
-                        Whether you have a question or just want to say hi, feel free to reach out!</p>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>sohitsharma922@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Mohali, Punjab. India</span>
-                        </div>
-                    </div>
-
-                    <div class="contact-social">
-                        <a href="https://github.com/Sohit-Sharma" target="_blank" class="social-link-large">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/sohit-sharma-940084172/" target="_blank"
-                            class="social-link-large">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:sohitsharma922@gmail.com" class="social-link-large">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <form class="contact-form animate-on-scroll" id="contact-form" action="https://formspree.io/f/xrevygzn"
-                    method="POST">
-                    <input type="hidden" name="_next" value="thanks.html">
-                    <input type="hidden" name="_subject" value="New contact form submission from portfolio">
-                    <input type="text" name="_gotcha" style="display:none">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Sohit Sharma. All rights reserved.</p>
-                <p>Built with <i class="fas fa-heart"></i> by Sohit-Sharma</p>
-            </div>
-            <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-                <i class="fas fa-arrow-up"></i>
-            </button>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Sohit Sharma. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart" aria-label="love"></i> by Sohit</p>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
