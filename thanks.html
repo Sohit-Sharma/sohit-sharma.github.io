@@ -12,8 +12,18 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 16px; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
         body {
             font-family: 'Inter', system-ui, sans-serif;
             background: #F7FAFF;
@@ -28,33 +38,88 @@
         }
 
         /* Animated background mesh */
-        .bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-        .bg-mesh { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.18; }
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .bg-mesh {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.18;
+        }
+
         .bg-mesh--1 {
-            width: 600px; height: 600px;
+            width: 600px;
+            height: 600px;
             background: radial-gradient(circle, #1686D9, transparent 70%);
-            top: -15%; left: -10%;
+            top: -15%;
+            left: -10%;
             animation: drift1 16s ease-in-out infinite;
         }
+
         .bg-mesh--2 {
-            width: 500px; height: 500px;
+            width: 500px;
+            height: 500px;
             background: radial-gradient(circle, #06B6D4, transparent 70%);
-            bottom: -10%; right: -5%;
+            bottom: -10%;
+            right: -5%;
             animation: drift2 18s ease-in-out infinite;
         }
+
         .bg-mesh--3 {
-            width: 400px; height: 400px;
+            width: 400px;
+            height: 400px;
             background: radial-gradient(circle, #7657E8, transparent 70%);
-            top: 40%; right: 40%;
+            top: 40%;
+            right: 40%;
             animation: drift3 14s ease-in-out infinite;
         }
-        @keyframes drift1 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(50px, -40px) scale(1.1); } }
-        @keyframes drift2 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-40px, 30px) scale(1.15); } }
-        @keyframes drift3 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(30px, 40px) scale(1.08); } }
+
+        @keyframes drift1 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(50px, -40px) scale(1.1);
+            }
+        }
+
+        @keyframes drift2 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(-40px, 30px) scale(1.15);
+            }
+        }
+
+        @keyframes drift3 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(30px, 40px) scale(1.08);
+            }
+        }
 
         /* Grid pattern */
         .bg-grid {
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             background-image:
                 linear-gradient(rgba(22, 134, 217, 0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(22, 134, 217, 0.04) 1px, transparent 1px);
@@ -63,10 +128,14 @@
 
         /* Card */
         .card {
-            position: relative; z-index: 1;
-            max-width: 520px; width: 100%; margin: 24px;
+            position: relative;
+            z-index: 1;
+            max-width: 520px;
+            width: 100%;
+            margin: 24px;
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(22, 134, 217, 0.15);
             border-radius: 24px;
             padding: 48px 40px;
@@ -74,86 +143,174 @@
             box-shadow: 0 20px 60px rgba(22, 134, 217, 0.12), 0 0 1px rgba(22, 134, 217, 0.2);
             animation: slideUp .7s cubic-bezier(.4, 0, .2, 1) both;
         }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* Success icon */
         .icon {
-            width: 76px; height: 76px; margin: 0 auto 28px;
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 28px;
             border-radius: 50%;
             background: linear-gradient(135deg, #1686D9, #06B6D4);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             box-shadow: 0 8px 30px rgba(22, 134, 217, 0.35);
             animation: pop .5s cubic-bezier(.4, 0, .2, 1) .2s both;
         }
-        @keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
-        .icon i { font-size: 2rem; color: #fff; }
+
+        @keyframes pop {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .icon i {
+            font-size: 2rem;
+            color: #fff;
+        }
 
         h1 {
             font-family: 'Space Grotesk', system-ui, sans-serif;
-            font-size: 2.1rem; font-weight: 700;
+            font-size: 2.1rem;
+            font-weight: 700;
             color: #17243A;
             margin-bottom: 12px;
             line-height: 1.2;
         }
+
         p.msg {
-            color: #4A5568; font-size: 1.05rem; line-height: 1.7;
+            color: #4A5568;
+            font-size: 1.05rem;
+            line-height: 1.7;
             margin-bottom: 32px;
         }
 
         /* Buttons */
-        .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
         .btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 12px 24px; border-radius: 10px;
-            font-family: 'Inter', system-ui, sans-serif; font-size: .92rem; font-weight: 600;
-            text-decoration: none; cursor: pointer; border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: .92rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
             transition: all .3s cubic-bezier(.4, 0, .2, 1);
         }
+
         .btn-primary {
             background: linear-gradient(135deg, #1686D9, #06B6D4);
             color: #fff;
             box-shadow: 0 4px 16px rgba(22, 134, 217, 0.25);
         }
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 24px rgba(22, 134, 217, 0.35);
             color: #fff;
         }
+
         .btn-outline {
-            background: #FFFFFF; color: #17243A;
+            background: #FFFFFF;
+            color: #17243A;
             border: 1.5px solid rgba(22, 134, 217, 0.2);
             box-shadow: 0 2px 8px rgba(22, 134, 217, 0.05);
         }
+
         .btn-outline:hover {
-            border-color: #1686D9; color: #1686D9;
+            border-color: #1686D9;
+            color: #1686D9;
             transform: translateY(-2px);
             box-shadow: 0 4px 14px rgba(22, 134, 217, 0.1);
         }
 
         /* Social */
-        .divider { border-top: 1px solid rgba(22, 134, 217, 0.1); padding-top: 24px; }
-        .divider p { color: #8896AB; font-size: .88rem; margin-bottom: 16px; font-weight: 500; }
-        .social { display: flex; justify-content: center; gap: 12px; }
+        .divider {
+            border-top: 1px solid rgba(22, 134, 217, 0.1);
+            padding-top: 24px;
+        }
+
+        .divider p {
+            color: #8896AB;
+            font-size: .88rem;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
         .social a {
-            width: 44px; height: 44px; border-radius: 12px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
             border: 1px solid rgba(22, 134, 217, 0.15);
             background: #FFFFFF;
-            display: flex; align-items: center; justify-content: center;
-            color: #4A5568; font-size: 1.05rem; text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4A5568;
+            font-size: 1.05rem;
+            text-decoration: none;
             transition: all .3s ease;
             box-shadow: 0 2px 6px rgba(22, 134, 217, 0.06);
         }
+
         .social a:hover {
-            color: #1686D9; border-color: #1686D9;
+            color: #1686D9;
+            border-color: #1686D9;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(22, 134, 217, 0.15);
         }
 
         @media(max-width: 480px) {
-            .card { padding: 36px 24px; margin: 16px; }
-            h1 { font-size: 1.7rem; }
-            .actions { flex-direction: column; }
-            .btn { width: 100%; justify-content: center; }
+            .card {
+                padding: 36px 24px;
+                margin: 16px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -170,7 +327,8 @@
         <div class="icon"><i class="fas fa-check"></i></div>
         <h1>Thank You!</h1>
         <p class="msg">
-            Your message has been sent successfully. I appreciate you reaching out and will get back to you as soon as possible.
+            Your message has been sent successfully. I appreciate you reaching out and will get back to you as soon as
+            possible.
         </p>
         <div class="actions">
             <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Portfolio</a>
@@ -179,7 +337,8 @@
         <div class="divider">
             <p>Connect with me:</p>
             <div class="social">
-                <a href="https://linkedin.com/in/sohit-sharma" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/sohit-sharma-940084172/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="https://github.com/sohit-sharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
